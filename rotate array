@@ -1,0 +1,17 @@
+in this we have to rotate the array in such way that there in a array that if we have given a k value and from that value we have to rotate the array
+
+for that we have the approch of the modulus % that is we have to start from(i+k)%n
+where numsize() is the total size and i is there loop trizersing element and then the k is value from where the rray has to rotate.
+
+
+
+
+class Solution{
+    void rotate(vector<int>& nums, int k) {
+         vector<int> temp(nums.size());  
+        for(int i=0; i<nums.size(); i++){
+            temp[(i+k)%nums.size()]=nums[i];
+        }
+        nums=temp;
+    }
+};  
